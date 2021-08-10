@@ -467,8 +467,10 @@ ul {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 .modal {
+  position: relative;
   width: 528px;
   height: 581px;
   background-color: var(--whitе-color-text);
@@ -476,6 +478,24 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.button-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.icon-close {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 10%;
+  right: 20%;
+  transform: translate(10%, 20%);
 }
 /* портфолио*/
 .text-hidden {
