@@ -28,6 +28,7 @@
   --hover-button: #188ce8;
   --background-icon-work: rgba(47, 48, 58, 0.8);
   --background-projects: rgba(33, 150, 243, 0.9);
+  --backdrop: rgba(0, 0, 0, 0.2);
 }
 /*общие*/
 body {
@@ -106,6 +107,7 @@ ul {
 /* sete nav*/
 
 .nav-link {
+  position: relative;
   color: var(--text-color);
   font-weight: 500;
   font-size: 14px;
@@ -116,9 +118,19 @@ ul {
 
 .current {
   color: var(--accent-color);
-  border-bottom: -1px var(--accent-color);
 }
-
+.current::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  transform: translate(0, 20%);
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-color);
@@ -443,7 +455,28 @@ ul {
 .client:focus .icon-client-item {
   fill: var(--accent-color);
 }
-
+/* модальное окно*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  width: 528px;
+  height: 581px;
+  background-color: var(--whitе-color-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 /* портфолио*/
 .text-hidden {
   visibility: hidden;
