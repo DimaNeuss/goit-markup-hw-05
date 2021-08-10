@@ -519,6 +519,7 @@ ul {
   padding: 20px 24px;
 }
 .projects-link {
+  position: relative;
   display: block;
 }
 .projects-link:hover,
@@ -532,16 +533,19 @@ ul {
 }
 .projets-hover::before {
   content: "";
+  display: inline-block;
   width: 100%;
   height: 100%;
   position: absolute;
   background-color: var(--background-projects);
   opacity: 0;
 }
-.projets-hover:hover::before {
+.projects-link:hover .projets-hover::before {
   opacity: 1;
 }
-
+.projects-item:hover .projets-hover-text {
+  opacity: 1;
+}
 .projets-hover-text {
   position: absolute;
   top: 0;
@@ -554,23 +558,4 @@ ul {
   padding: 63px 24px;
   letter-spacing: 0.03em;
   opacity: 0;
-}
-
-.projects-item:hover .projets-hover-text {
-  opacity: 1;
-}
-.work-text {
-  position: absolute;
-  top: 88%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 27px 82px;
-  width: 100%;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.2;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--whitе-color-text);
-  background-color: var(--background-icon-work);
 }
