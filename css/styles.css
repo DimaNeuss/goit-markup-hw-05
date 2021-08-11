@@ -48,18 +48,18 @@ h1,
 h2,
 h3,
 h4,
-p,
+p {
+  padding: 0px;
+}
 ul {
   padding: 0px;
   margin: 0px;
+  list-style: none;
 }
 
 .header {
   display: flex;
   align-items: center;
-}
-.list {
-  list-style: none;
 }
 .link {
   text-decoration: none;
@@ -138,7 +138,6 @@ ul {
 /* позиционирование nav */
 .site-nav {
   display: flex;
-  flex-direction: row;
   margin-left: 93px;
 }
 
@@ -166,12 +165,12 @@ ul {
 .icon-contacts .contacts .link:focus .icon-contacts {
   fill: var(--accent-color);
 }
-.contacts.list {
+.contacts {
   display: flex;
   margin-left: auto;
   align-items: center;
 }
-.contacts.list .contacts-link:not(:first-child) {
+.contacts .contacts-link:not(:first-child) {
   margin-left: 50px;
 }
 .icon-contacts {
@@ -206,8 +205,7 @@ ul {
   display: flex;
 }
 .social {
-  margin-left: 70px;
-  margin-top: 20px;
+  margin: 20px 0 0 70px;
 }
 .social-title {
   margin-bottom: 20px;
@@ -220,7 +218,6 @@ ul {
 }
 .footer-link {
   display: flex;
-  tab-size: 0;
 }
 .footer-link-icon:not(:last-child) {
   margin-right: 10px;
@@ -259,7 +256,7 @@ ul {
       var(--background-image-color),
       var(--background-image-color)
     ),
-    url(../images/new-Img\ .jpg);
+    url(../images/new-Img.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -324,7 +321,7 @@ ul {
   margin-left: 0px;
 }
 .icon-features {
-  height: 120px;
+  padding: 25px 100px;
   background: var(--secondary-background-color);
   border-radius: 4px;
   margin-bottom: 30px;
@@ -332,14 +329,13 @@ ul {
 .icons {
   width: 70px;
   height: 70px;
-  margin: 25px 100px;
 }
 /*чем мы занимаемся*/
 .work {
   padding-top: 0px;
 }
 
-.work .list {
+.work {
   display: flex;
   flex-basis: calc(100% / 3);
   justify-content: space-between;
@@ -363,19 +359,16 @@ ul {
   background-color: var(--background-icon-work);
 }
 /*позиции наша команда*/
-.team.list {
+.team {
   display: flex;
   justify-content: space-between;
 }
-.team.list .team-specialist {
+.team .team-specialist {
   flex-wrap: wrap;
   background-color: var(--primary-bgc);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-.team.list .team-specialist:first-child {
-  margin-left: 0px;
 }
 
 /*Наша команда*/
@@ -437,11 +430,7 @@ ul {
   justify-content: space-between;
 }
 .client {
-  width: 170px;
-  height: 92px;
-  padding: 16px 32px;
   border: 1px solid var(--fill-icon);
-  box-sizing: border-box;
   border-radius: 4px;
 }
 .client:hover,
@@ -449,10 +438,13 @@ ul {
   border: 1px solid var(--accent-color);
 }
 .icon-client-item {
+  display: block;
+  padding: 12px 36px;
+  border: none;
   fill: var(--fill-icon);
 }
-.client:hover .icon-client-item,
-.client:focus .icon-client-item {
+.icon-client-item:hover,
+.icon-client-item:focus {
   fill: var(--accent-color);
 }
 /* модальное окно*/
@@ -526,6 +518,9 @@ ul {
 .secondary-button:focus {
   color: var(--whitе-color-text);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 /*проекты*/
 .projects {
@@ -561,8 +556,7 @@ ul {
 }
 
 .projects .projects-item {
-  margin-left: 30px;
-  margin-top: 30px;
+  margin: 30px 0 0 30px;
   flex-basis: calc(100% / 3 - 30px);
 }
 
@@ -579,7 +573,6 @@ ul {
 .projects-link:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 .projets-hover {
   position: relative;
