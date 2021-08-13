@@ -50,7 +50,7 @@ h2,
 h3,
 h4,
 p {
-  padding: 0px;
+  margin: 0px;
 }
 ul {
   padding: 0px;
@@ -115,7 +115,7 @@ ul {
   line-height: 1.1;
   padding: 30px 0;
   display: block;
-  transition: color 250ms var() var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 
 .current {
@@ -163,12 +163,9 @@ ul {
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--accent-color);
-}
-
-.contacts .link:hover,
-.icon-contacts .contacts .link:focus .icon-contacts {
   fill: var(--accent-color);
 }
+
 .contacts {
   display: flex;
   margin-left: auto;
@@ -299,7 +296,6 @@ ul {
 .primary-button:focus {
   background-color: var(--hover-button);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
 
 /*особенности*/
@@ -353,10 +349,8 @@ ul {
 }
 .work-text {
   position: absolute;
-  top: 88%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 27px 82px;
+  bottom: 0;
+  padding: 27px;
   width: 100%;
   font-weight: 700;
   font-size: 14px;
@@ -438,25 +432,21 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-.client {
-  border: 1px solid var(--fill-icon);
-  border-radius: 4px;
-  transition: border 250ms var(--timing-function);
-}
-.client:hover,
-.client:focus {
-  border: 1px solid var(--accent-color);
-}
 .icon-client-item {
   display: block;
   padding: 12px 36px;
   border: none;
   fill: var(--fill-icon);
   transition: fill 250ms var(--timing-function);
+  border: 1px solid var(--fill-icon);
+  border-radius: 4px;
+  transition: border 250ms var(--timing-function),
+    fill 250ms var(--timing-function);
 }
 .icon-client-item:hover,
 .icon-client-item:focus {
   fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 /* модальное окно*/
 .backdrop {
@@ -530,7 +520,7 @@ ul {
   padding: 6px 22px;
   border: 0px solid transparent;
   transition: background-color 250ms var(--timing-function),
-    box-shadow 250ms var(--timing-function);
+    box-shadow 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 .secondary-button:hover,
 .secondary-button:focus {
@@ -538,7 +528,6 @@ ul {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 /*проекты*/
 .projects {
